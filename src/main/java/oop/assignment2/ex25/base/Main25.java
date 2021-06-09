@@ -66,7 +66,7 @@ public class Main25 {
             return "The password " + "'" + pass + "' is a very strong password,\n" +
                     "but it does not meet the character limit.";
         } else {
-            return "How the hell did you get here?";
+            return "The password " + "'" + pass + "' has foreign characters.";
         }
     }
 }
