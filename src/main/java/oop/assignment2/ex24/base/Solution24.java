@@ -8,7 +8,7 @@ package oop.assignment2.ex24.base;
 // Import scanner
 import java.util.Scanner;
 
-public class Main24 {
+public class Solution24 {
     // Declare scanner variable and strings for words
     private static final Scanner input = new Scanner(System.in);
 

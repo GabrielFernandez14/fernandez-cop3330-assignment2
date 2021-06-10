@@ -5,7 +5,7 @@
 
 package oop.assignment2.ex25.base;
 
-public class Main25 {
+public class Solution25 {
     // Declare constants, which in this case are the passwords
     // themselves, since the prompt said they were given to us
     private static final String pass1 = "12345";
