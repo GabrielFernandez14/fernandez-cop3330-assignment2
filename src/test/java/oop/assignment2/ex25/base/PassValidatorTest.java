@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PassValidatorTest {
-
     @Test
     void passwordValidator_pass_is_only_numbers_and_is_less_than_8() {
         // given
