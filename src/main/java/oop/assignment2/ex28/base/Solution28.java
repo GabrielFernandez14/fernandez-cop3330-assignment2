@@ -4,7 +4,8 @@
  */
 
 /*
-    Scuffed FlowChart:
+Scuffed FlowChart:
+
 Main                    |--------> getInput()
 |                       |               |
 \/                      |               \/
