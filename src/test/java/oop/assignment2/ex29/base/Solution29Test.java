@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Solution29Test {
+    // I know this gives a warning saying it's always inverted
+    // but that's because it doesn't realize it's being used
+    // as a condition for the while loop, so it does actually work
     public static boolean isNum(String input) {
         try {
             Double.parseDouble(input);
