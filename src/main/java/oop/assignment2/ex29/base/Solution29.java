@@ -3,42 +3,63 @@
  *  Copyright 2021 Gabriel Fernandez
  */
 
-// NOT FINISHED
-
 package oop.assignment2.ex29.base;
 
+// Import scanner and math library
 import java.util.Scanner;
 import java.lang.Math;
 
 public class Solution29 {
+    // Declare scanner public variable
     public static final Scanner in = new Scanner(System.in);
 
+    // Main function calls getYears() and that's it
     public static void main(String[] args) {
-        double years = getYears();
+        int years = getYears();
 
-        int yearsInt = (int)Math.round(years);
-
-        System.out.println("It will take " + yearsInt +
+        System.out.println("It will take " + years +
                 " years to double your initial investment.");
     }
 
-    public static double getYears() {
-        int input;
+    // Gets the number of years from the user
+    public static int getYears() {
+        // Declare input as a string since then we can use
+        // .parseInt later to make my life easier
+        String input;
         double total;
 
-        while (true) {
-            System.out.print("What is the rate of return? ");
+        // Initial prompt
+        System.out.print("What is the rate of return? ");
+        input = in.nextLine();
 
-            if (in.hasNextInt() && in.nextInt() != 0) {
-                input = in.nextInt();
-                total = 72.0 / input;
-                break;
-            }
-            else {
-                System.out.println("Sorry. That's not a valid input.");
-            }
+        // while the result of isNum() is false, and the user did
+        // not input 0, this loop will continue
+        while (!isNum(input) || input.equals("0")) {
+            System.out.println("Sorry. That's not a valid input.");
+            System.out.print("What is the rate of return? ");
+            input = in.nextLine();
         }
 
-        return total;
+        // The user must have entered valid input, so we can calculate
+        double num = Double.parseDouble(input);
+        total = 72.0 / num;
+
+        // Return the value as a rounded integer via typecast
+        return (int) Math.round(total);
+    }
+
+    // Boolean function that verifies if the string inputted
+    // is a number
+    public static boolean isNum(String input) {
+        try {
+            Double.parseDouble(input);
+        } catch (NumberFormatException e) {
+            // The input is not an integer
+            return false;
+        }
+
+        // If we make it past the try-catch statement,
+        // our input is a number
+        return true;
     }
 }
