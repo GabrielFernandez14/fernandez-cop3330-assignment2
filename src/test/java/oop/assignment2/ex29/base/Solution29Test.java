@@ -10,9 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Solution29Test {
     // I know this gives a warning saying it's always inverted
-    // but that's because it doesn't realize it's being used
-    // as a condition for the while loop, so it does actually work
-    public static boolean isNum(String input) {
+    // but the test cases still work as intended (exiting the
+    // while loop when a number is reached) so I'm not sure how
+    // to get rid of the warning when it's working as intended
+    public boolean isNum(String input) {
         try {
             Double.parseDouble(input);
         } catch (NumberFormatException e) {
