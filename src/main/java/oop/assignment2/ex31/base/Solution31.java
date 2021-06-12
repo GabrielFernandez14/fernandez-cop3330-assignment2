@@ -45,7 +45,6 @@ public class Solution31 {
             else {
                 System.out.println("Sorry. Please enter a numerical value.");
             }
-
             System.out.print("Resting Pulse: ");
             pulse = in.nextLine();
         }
