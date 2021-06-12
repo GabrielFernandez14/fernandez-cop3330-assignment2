@@ -41,14 +41,13 @@ public class Solution31 {
         while (!isNum(pulse) || pulse.equals("0")) {
             if (pulse.equals("0")) {
                 System.out.println("You are literally dead. Please try again.");
-                System.out.print("Resting Pulse: ");
-                pulse = in.nextLine();
             }
             else {
                 System.out.println("Sorry. Please enter a numerical value.");
-                System.out.print("Resting Pulse: ");
-                pulse = in.nextLine();
             }
+
+            System.out.print("Resting Pulse: ");
+            pulse = in.nextLine();
         }
 
         System.out.print("Age: ");
@@ -56,16 +55,15 @@ public class Solution31 {
 
         while (!isNum(age) || age.equals("0")) {
             if (age.equals("0")) {
-                System.out.println("You are literally a fetus. Please try again.");
-                System.out.print("Age: ");
-                age = in.nextLine();
+                System.out.println("You are literally a zygote. Please try again.");
 
             }
             else {
                 System.out.println("Sorry. Please enter a numerical value.");
-                System.out.print("Age: ");
-                age = in.nextLine();
             }
+
+            System.out.print("Age: ");
+            age = in.nextLine();
         }
     }
 
@@ -75,9 +73,9 @@ public class Solution31 {
     // it's always inverted, even if it is a warning, it still
     // works as intended so I'm just going to continue ignoring
     // the warning
-    public static boolean isNum(String input) {
+    public static boolean isNum(String s) {
         try {
-            Double.parseDouble(input);
+            Double.parseDouble(s);
         } catch (NumberFormatException e) {
             // The input is not an integer
             return false;

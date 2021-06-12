@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class Solution29Test {
     // I know this gives a warning saying it's always inverted
     // but the test cases still work as intended (exiting the
-    // while loop when a number is reached) so I'm not sure how
-    // to get rid of the warning when it's working as intended
+    // while loop when a number is reached) so I'm just going
+    // to ignore it
     public boolean isNum(String input) {
         try {
             Double.parseDouble(input);
@@ -39,6 +39,7 @@ class Solution29Test {
         double num = Double.parseDouble(input[counter]);
         int actual = (int) Math.round(72.0 / num);
 
+        assertEquals(2, counter);
         assertEquals(18, actual);
     }
 
@@ -58,6 +59,7 @@ class Solution29Test {
         double num = Double.parseDouble(input[counter]);
         int actual = (int) Math.round(72.0 / num);
 
+        assertEquals(1, counter);
         assertEquals(4, actual);
     }
 
@@ -77,6 +79,7 @@ class Solution29Test {
         double num = Double.parseDouble(input[counter]);
         int actual = (int) Math.round(72.0 / num);
 
+        assertEquals(5, counter);
         assertEquals(4, actual);
     }
 }
