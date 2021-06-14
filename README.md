@@ -2,4 +2,4 @@
 Wowzers
 Completed Assignment, (Minus exercises 39 and 40) - 
 Please have mercy on my grade -
-Made public - 
+Made public
